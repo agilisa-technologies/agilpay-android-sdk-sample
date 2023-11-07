@@ -1,5 +1,5 @@
 # agilpay-android-sdk-sample
-Sample project that explains how to use and consume the Paynet SDK
+Sample project that explains how to use and consume the Paynet mobile SDK for android.
 
 **Live demo:**
 https://www.figma.com/proto/k0M65ur5kWDoiZAHD8xORN/Paynet-SDK-Mobile-Xamarin.Forms?type=design&node-id=41-1892&t=NfwjDxvHIkTidwyt-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=41%3A1892&mode=design
