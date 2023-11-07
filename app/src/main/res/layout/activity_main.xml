@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:visibility="gone"
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:text="Customer Id"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editCustomerId"
+            android:inputType="textNoSuggestions"
+            android:autofillHints="username"
+            android:imeOptions="actionNext"
+            android:hint="Enter the customer Id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Amount"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionNext"
+            android:text="13.57"
+            android:hint="Enter the transaction amount"
+            android:autofillHints="@null" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Tax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionNext"
+            android:text="0"
+            android:hint="Enter the tax amount"
+            android:autofillHints="@null" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Currency code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="840"
+            android:imeOptions="actionNext"
+            android:hint="Enter the currency code"
+            android:autofillHints="@null" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Customer Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:text="test@gmail.com"
+            android:hint="Enter the customer email"
+            android:autofillHints="emailAddress" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Customer name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionNext"
+            android:text="John doe"
+            android:hint="Enter the customer name"
+            android:autofillHints="name" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Invoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionDone"
+            android:hint="Enter the invoice number"
+            android:autofillHints="@null" />
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkForceDuplicate"
+                android:layout_marginTop="5dp"
+                android:text="Force duplicate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/checkHoldFunds"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:text="Hold funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="Process Payment" />
+
+
+        <Button
+            android:id="@+id/btnViewCredentials"
+            android:background="@android:color/transparent"
+            android:text="View Credentials"
+            android:textAllCaps="true"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/layoutCredentials"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="ClientId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editClientId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:imeOptions="actionNext"
+                android:text="API-001"
+                android:hint="Enter the ClientId"
+                android:autofillHints="@null" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="ClientSecret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editClientSecret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:imeOptions="actionNext"
+                android:text="Dynapay"
+                android:hint="Enter the ClientSecret"
+                android:autofillHints="@null" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="MerchantKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editMerchantKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:imeOptions="actionNext"
+                android:text="TEST-001"
+                android:hint="Enter the merchant key"
+                android:autofillHints="@null" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="API Url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editApiUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:text="https://sandbox-webapi.agilpay.net/"
+                android:imeOptions="actionDone"
+                android:hint="Enter the API Url"
+                android:autofillHints="@null" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
