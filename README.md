@@ -17,9 +17,9 @@ dependencyResolutionManagement {
 		repositories {
 			mavenCentral()
 			maven {
-        url 'https://jitpack.io'
-        credentials { username authToken }
-      }
+		        url 'https://jitpack.io'
+		        credentials { username authToken }
+		      }
 		}
 	}
 ```
